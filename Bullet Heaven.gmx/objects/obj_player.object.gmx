@@ -25,20 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Player symmetric variable initialization
+            <string>/// Creation
 
-//inherit from obj_loop
 event_inherited();
 
-tag = 0;
-turn_speed  = 3;
 speed = 5;
-
-var max_health = 4;
-damage = 100 / max_health;
-health = 100;
+turn_speed = 3;
+move_speed = 5;
+dir = 0;
 
 alarm[0] = 10;
+damage = 25;
+health = 100;
 </string>
           </argument>
         </arguments>
@@ -64,7 +62,7 @@ alarm[0] = 10;
             <string>var bullet = instance_create(x,y, obj_bullet);
 bullet.direction = direction;
 bullet.tag = tag;
-alarm[0] = 10;
+alarm[0] = 30;
 </string>
           </argument>
         </arguments>
@@ -87,18 +85,8 @@ alarm[0] = 10;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Keyboard Motion
-
-if (keyboard_check(left)) {
-    direction += turn_speed;
-    image_angle += turn_speed;
-}
-if (keyboard_check(right)) {
-    direction -= turn_speed;
-    image_angle -= turn_speed;
-}
-
-y += global.roomSpeed;
+            <string>/// Inherit Event
+event_inherited();
 </string>
           </argument>
         </arguments>
@@ -119,8 +107,22 @@ y += global.roomSpeed;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Inherit Event
-event_inherited();
+            <string>/// Keyboard Motion
+
+if (keyboard_check(left)) {
+    dir += turn_speed;
+    image_angle += turn_speed;
+}
+if (keyboard_check(right)) {
+    dir -= turn_speed;
+    image_angle -= turn_speed;
+}
+
+var vx = cos(dir * pi / 180) * move_speed;
+var vy = -sin(dir * pi / 180) * move_speed + global.roomSpeed;
+
+direction = arctan2(vy, -vx) * 180 / pi;
+speed = sqrt(vx * vx + vy * vy);
 </string>
           </argument>
         </arguments>
