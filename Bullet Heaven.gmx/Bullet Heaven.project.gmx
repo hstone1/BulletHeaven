@@ -19,6 +19,7 @@
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
     <object>objects\obj_bullet</object>
+    <object>objects\obj_loop</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\game_room</room>
