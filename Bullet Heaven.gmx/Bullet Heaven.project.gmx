@@ -9,6 +9,8 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_obstacle</sprite>
+    <sprite>sprites\spr_play</sprite>
+    <sprite>sprites\spr_quit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\game_background</background>
@@ -22,8 +24,11 @@
     <object>objects\obj_loop</object>
     <object>objects\obj_room_mover</object>
     <object>objects\obj_obstacle</object>
+    <object>objects\obj_playbtn</object>
+    <object>objects\obj_quitbtn</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\menu_room</room>
     <room>rooms\game_room</room>
   </rooms>
   <help>
