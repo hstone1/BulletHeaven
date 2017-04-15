@@ -10,7 +10,7 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_obstacle</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
     <background>background\game_background</background>
   </backgrounds>
   <paths name="paths"/>
