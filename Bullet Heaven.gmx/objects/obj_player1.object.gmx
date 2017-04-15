@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>// Left right variable setting
 event_inherited();
-
+tag = 1;
 left = vk_left;
 right = vk_right;
 </string>
