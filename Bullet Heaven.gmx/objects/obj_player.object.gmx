@@ -145,6 +145,9 @@ event_inherited();
 
 if (other.canHit or other.tag != tag) {
     health -= damage;
+    if (health == 0) {
+        instance_destroy();
+    }
     with(other) {
         instance_destroy();
     }

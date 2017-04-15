@@ -67,9 +67,9 @@ if (x &gt; rright) {
     x = rleft;
 }
 
-//if (y &lt; rbottom) {
-//    instance_destroy();
-//}
+if (y &gt; room_height) {
+    instance_destroy();
+}
 
 </string>
           </argument>
