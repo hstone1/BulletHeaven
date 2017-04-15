@@ -14,6 +14,9 @@
     <background>background\game_background</background>
   </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_bullet</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\game_room</room>
   </rooms>
