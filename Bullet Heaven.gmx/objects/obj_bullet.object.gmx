@@ -80,6 +80,13 @@ alarm[0] = 30;
           <argument>
             <kind>1</kind>
             <string>speed *= 0.99999;
+            <string>/// Destroy offscreen
+
+event_inherited();
+
+if (y &lt; 0) {
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
