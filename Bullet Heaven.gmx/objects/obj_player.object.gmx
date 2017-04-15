@@ -63,7 +63,7 @@ health = 100;
 bullet.direction = dir;
 bullet.tag = tag;
 show_debug_message("djas");
-alarm[0] = 30;
+alarm[0] = 10;
 </string>
           </argument>
         </arguments>
