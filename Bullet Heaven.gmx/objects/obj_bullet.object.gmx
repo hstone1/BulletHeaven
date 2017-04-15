@@ -28,12 +28,12 @@
             <string>/// set bullet speed and motion
 event_inherited();
 tag = 0;
-speed = -5;
+speed = 5;
 motion_set(direction, speed);
 image_index = irandom(3);
 image_speed = 0;
 canHit = false;
-alarm[0] = 30;
+alarm[0] = 50;
 </string>
           </argument>
         </arguments>
@@ -80,11 +80,11 @@ alarm[0] = 30;
           <argument>
             <kind>1</kind>
             <string>/// Destroy offscreen
-           speed *= 0.99999;
+speed *= 0.995;
 event_inherited();
 
-if (y &lt; 0) {
-    instance_destroy();
+if (y &lt; -global.offY) {
+    //instance_destroy();
 }
 </string>
           </argument>

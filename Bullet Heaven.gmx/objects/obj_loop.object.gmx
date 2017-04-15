@@ -65,8 +65,8 @@ if (x &gt; rright) {
     x = rleft;
 }
 
-if (y &gt; room_height) {
-    instance_destroy();
+if (y &gt; room_height - global.offY) {
+    //instance_destroy();
 }
 
 </string>

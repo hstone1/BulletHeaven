@@ -60,8 +60,9 @@ health = 100;
           <argument>
             <kind>1</kind>
             <string>var bullet = instance_create(x,y, obj_bullet);
-bullet.direction = direction;
+bullet.direction = dir;
 bullet.tag = tag;
+show_debug_message("djas");
 alarm[0] = 30;
 </string>
           </argument>
