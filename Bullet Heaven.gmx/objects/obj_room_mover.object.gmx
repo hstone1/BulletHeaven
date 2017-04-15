@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>/// OffY = 0
 
-offY = 0;
-roomSpeed = 2;
+global.offY = 0;
+global.roomSpeed = 2;
 </string>
           </argument>
         </arguments>
@@ -52,8 +52,8 @@ roomSpeed = 2;
           <argument>
             <kind>1</kind>
             <string>/// Move the room on tick
-offY -= roomSpeed;
-view_yview[0] = offY;
+global.offY -= global.roomSpeed;
+view_yview[0] = global.offY;
 </string>
           </argument>
         </arguments>

@@ -21,6 +21,7 @@
     <object>objects\obj_bullet</object>
     <object>objects\obj_loop</object>
     <object>objects\obj_room_mover</object>
+    <object>objects\obj_obstacle</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\game_room</room>

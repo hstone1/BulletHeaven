@@ -30,8 +30,9 @@
 //inherit from obj_loop
 event_inherited();
 
+tag = 0;
 turn_speed  = 3;
-speed = 3;
+speed = 5;
 
 var max_health = 4;
 damage = 100 / max_health;
@@ -62,6 +63,7 @@ alarm[0] = 10;
             <kind>1</kind>
             <string>var bullet = instance_create(x,y, obj_bullet);
 bullet.direction = direction;
+bullet.tag = tag;
 alarm[0] = 10;
 </string>
           </argument>
@@ -95,6 +97,8 @@ if (keyboard_check(right)) {
     direction -= turn_speed;
     image_angle -= turn_speed;
 }
+
+y += global.roomSpeed;
 </string>
           </argument>
         </arguments>
@@ -141,9 +145,11 @@ event_inherited();
             <kind>1</kind>
             <string>/// Bullet damage and destruction
 
-health -= damage;
-with(other){
-    //instance_destroy();
+if (other.canHit or other.tag != tag) {
+    health -= damage;
+    with(other) {
+        instance_destroy();
+    }
 }
 </string>
           </argument>
