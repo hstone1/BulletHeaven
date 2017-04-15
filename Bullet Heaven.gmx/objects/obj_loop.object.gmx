@@ -67,8 +67,8 @@ if (x &gt; rright) {
     x = rleft;
 }
 
-//if (y &lt; bottom) {
-    //instance_destroy();
+//if (y &lt; rbottom) {
+//    instance_destroy();
 //}
 
 </string>

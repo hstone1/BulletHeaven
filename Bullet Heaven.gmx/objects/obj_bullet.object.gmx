@@ -25,10 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///script_bullet
-direction = point_direction(x,y,obj_player.x,obj_player.y)
+            <string>/// set bullet speed and motion
+event_inherited();
+
 speed = -5;
 motion_set(direction, speed);
+image_index = irandom(3);
+image_speed = 0;
 </string>
           </argument>
         </arguments>
