@@ -52,7 +52,7 @@
 }
 
 if (x &gt; 1124 and y &lt; 768 and y &gt; 0) {
-    x - 100;
+    x = -100;
 }
 </string>
           </argument>

@@ -25,8 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///script_bullet
-direction = point_direction(x,y,obj_player.x,obj_player.y)
+            <string>/// set bullet speed and motion
 speed = -5;
 motion_set(direction, speed);
 </string>
