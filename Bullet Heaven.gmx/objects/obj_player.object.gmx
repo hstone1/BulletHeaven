@@ -26,7 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>/// Player symmetric variable initialization
-turn_speed  = 1;
+
+//inherit from obj_loop
+event_inherited();
+
+turn_speed  = 3;
+speed = 3;
 
 var max_health = 4;
 damage = 100 / max_health;
@@ -64,8 +69,56 @@ if (keyboard_check(right)) {
     direction -= turn_speed;
     image_angle -= turn_speed;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Inherit Event
+event_inherited();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Bullet damage and destruction
 
-speed = 2;
+health -= damage;
+with(other){
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

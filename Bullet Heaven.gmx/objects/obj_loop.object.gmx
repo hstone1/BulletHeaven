@@ -25,7 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>/// set room size
+
+var width = 1024;
+var height = 768;
+var padding = 0;
+
+rleft = 0 - padding;
+rright = width + padding;
+rtop = 0 - padding;
+rbottom = height + padding;
+</string>
           </argument>
         </arguments>
       </action>
@@ -47,13 +57,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (x &lt; -100 and y &lt; 768 and y &gt; 0) {
-    x = 1124;
+            <string>show_debug_message(x);
+
+if (x &lt; rleft) {
+    x = rright;
 }
 
-if (x &gt; 1124 and y &lt; 768 and y &gt; 0) {
-    x - 100;
+if (x &gt; rright) {
+    x = rleft;
 }
+
+//if (y &lt; bottom) {
+    //instance_destroy();
+//}
+
 </string>
           </argument>
         </arguments>
