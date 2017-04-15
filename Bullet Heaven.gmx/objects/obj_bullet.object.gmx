@@ -79,9 +79,8 @@ alarm[0] = 30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed *= 0.99999;
             <string>/// Destroy offscreen
-
+           speed *= 0.99999;
 event_inherited();
 
 if (y &lt; 0) {
