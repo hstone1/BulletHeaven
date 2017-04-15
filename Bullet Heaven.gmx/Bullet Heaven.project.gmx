@@ -11,7 +11,12 @@
     <sprite>sprites\spr_obstacle</sprite>
   </sprites>
   <backgrounds name="background"/>
+    <background>background\game_background</background>
+  </backgrounds>
   <paths name="paths"/>
+  <rooms name="rooms">
+    <room>rooms\game_room</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
