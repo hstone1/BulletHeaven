@@ -29,13 +29,14 @@
 
 event_inherited();
 
-speed = 5;
-turn_speed = 3;
-move_speed = 5;
-dir = 0;
+speed = 10;
+turn_speed = 5;
+move_speed = 8;
+dir = -90;
+image_angle = -90;
 
 alarm[0] = 10;
-damage = 25;
+damage = 5;
 health = 100;
 </string>
           </argument>
@@ -59,10 +60,17 @@ health = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var bullet = instance_create(x,y, obj_bullet);
-bullet.direction = dir;
-bullet.tag = tag;
-show_debug_message("djas");
+            <string>if (keyboard_check(forward)) {
+    var bullet = instance_create(x,y, obj_bullet);
+    bullet.direction = dir;
+    bullet.image_angle = image_angle;
+    bullet.tag = tag;
+    if (sprite_index == spr_player) {
+        sprite_index = spr_player_open;
+    } else if (sprite_index == spr_player_open) {
+        sprite_index = spr_player;
+    }
+}
 alarm[0] = 10;
 </string>
           </argument>
@@ -110,20 +118,35 @@ event_inherited();
             <kind>1</kind>
             <string>/// Keyboard Motion
 
-if (keyboard_check(left)) {
+if (keyboard_check(tiltL)) {
     dir += turn_speed;
     image_angle += turn_speed;
 }
-if (keyboard_check(right)) {
+if (keyboard_check(tiltR)) {
     dir -= turn_speed;
     image_angle -= turn_speed;
 }
 
-var vx = cos(dir * pi / 180) * move_speed;
-var vy = -sin(dir * pi / 180) * move_speed + global.roomSpeed;
+direction = 0;
+speed = 0;
 
-direction = arctan2(vy, -vx) * 180 / pi;
-speed = sqrt(vx * vx + vy * vy);
+y -= 6;
+
+if (keyboard_check(forward)) {
+    var vx = cos(dir * pi / 180) * move_speed;
+    var vy = -sin(dir * pi / 180) * move_speed;
+    
+    direction = arctan2(vy, -vx) * 180 / pi;
+    speed = sqrt(vx * vx + vy * vy);
+
+}
+if (keyboard_check(left)) {
+    x -= 5;
+}
+if (keyboard_check(right)) {
+    x +=5;
+}
+
 </string>
           </argument>
         </arguments>
@@ -150,6 +173,7 @@ speed = sqrt(vx * vx + vy * vy);
 
 if (other.canHit or other.tag != tag) {
     health -= damage;
+
     if (health == 0) {
         instance_destroy();
     }
@@ -189,7 +213,7 @@ draw_healthbar(x - 50, y - 50, x + 50, y - 30, health, c_black, c_red, c_green, 
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectShape>2</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>

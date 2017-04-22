@@ -28,7 +28,7 @@
             <string>/// OffY = 0
 
 global.offY = 0;
-global.roomSpeed = 2;
+global.roomSpeed = 10;
 </string>
           </argument>
         </arguments>

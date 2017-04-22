@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// set room size
 
-var width = 1024;
+var width = 768;
 var height = 768;
 var padding = 0;
 
@@ -63,10 +63,6 @@ rbottom = height + padding;
 
 if (x &gt; rright) {
     x = rleft;
-}
-
-if (y &gt; room_height - global.offY) {
-    //instance_destroy();
 }
 
 </string>

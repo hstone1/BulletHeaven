@@ -7,10 +7,12 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_player_open</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_obstacle</sprite>
     <sprite>sprites\spr_play</sprite>
     <sprite>sprites\spr_quit</sprite>
+    <sprite>sprites\sprite7</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\game_background</background>
@@ -26,6 +28,7 @@
     <object>objects\obj_obstacle</object>
     <object>objects\obj_playbtn</object>
     <object>objects\obj_quitbtn</object>
+    <object>objects\obj_obstacle_spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>

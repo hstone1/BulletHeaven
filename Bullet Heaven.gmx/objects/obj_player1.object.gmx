@@ -28,8 +28,11 @@
             <string>/// Left right variable setting
 event_inherited();
 tag = 1;
-left = vk_left;
-right = vk_right;
+left = ord('J');
+right = ord('L');
+forward = ord('I');
+tiltL = ord('U');
+tiltR = ord('O');
 
 event_inherited();
 </string>
@@ -61,7 +64,7 @@ event_inherited();
       </action>
     </event>
   </events>
-  <PhysicsObject>-1</PhysicsObject>
+  <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
@@ -72,8 +75,5 @@ event_inherited();
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>45,42</point>
-    <point>45,45</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>

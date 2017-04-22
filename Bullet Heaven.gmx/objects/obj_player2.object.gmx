@@ -30,6 +30,9 @@ event_inherited();
 tag = 2;
 left = ord('A');
 right = ord('D');
+forward = ord('W');
+tiltL = ord('Q');
+tiltR = ord('E');
 </string>
           </argument>
         </arguments>
