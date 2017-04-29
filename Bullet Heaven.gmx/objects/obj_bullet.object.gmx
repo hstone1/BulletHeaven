@@ -32,7 +32,7 @@ speed = 13;
 
 motion_set(direction, speed);
 
-image_index = irandom(8);
+image_index = irandom(9);
 image_speed = 0;
 canHit = false;
 alarm[0] = 50;
@@ -59,7 +59,8 @@ alarm[1] = 50000;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_destroy();
+            <string>///Despawn eventually
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -105,12 +106,9 @@ alarm[1] = 50000;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Destroy offscreen
+            <string>/// Slow over time
 speed *= 0.9999995;
 event_inherited();
-if (y &lt; -global.offY) {
-    //instance_destroy();
-}
 </string>
           </argument>
         </arguments>
@@ -144,7 +142,7 @@ speed = other.speed;
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>0</PhysicsObjectShape>
+  <PhysicsObjectShape>1</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>1</PhysicsObjectGroup>

@@ -157,6 +157,8 @@ if (keyboard_check(right)) {
     x +=5;
 }
 
+//if (y &gt; global.offY + 
+
 </string>
           </argument>
         </arguments>
