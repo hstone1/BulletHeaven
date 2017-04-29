@@ -26,7 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>time = 0;
-image_angle = -90;
+if (score == 2) {
+    sprite_index = spr_player;
+} else {
+    sprite_index = spr_player_2;
+}
 </string>
           </argument>
         </arguments>
