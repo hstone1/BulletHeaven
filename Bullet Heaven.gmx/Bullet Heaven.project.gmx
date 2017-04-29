@@ -12,9 +12,12 @@
     <sprite>sprites\spr_obstacle</sprite>
     <sprite>sprites\spr_play</sprite>
     <sprite>sprites\spr_quit</sprite>
+    <sprite>sprites\spr_info</sprite>
+    <sprite>sprites\sprite7</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\game_background</background>
+    <background>background\background1</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -29,11 +32,14 @@
     <object>objects\obj_quitbtn</object>
     <object>objects\obj_obstacle_spawner</object>
     <object>objects\obj_winner</object>
+    <object>objects\obj_info</object>
+    <object>objects\object12</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>
     <room>rooms\game_room</room>
     <room>rooms\end_room</room>
+    <room>rooms\about_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

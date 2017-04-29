@@ -37,7 +37,7 @@ image_angle = -90;
 
 alarm[0] = 10;
 damage = 5;
-health = 100;
+hlth = 100;
 </string>
           </argument>
         </arguments>
@@ -128,7 +128,7 @@ event_inherited();
             <kind>1</kind>
             <string>/// Keyboard Motion
 
-if (health &gt; 0) {
+if (hlth &gt; 0) {
 if (keyboard_check(tiltL)) {
     dir += turn_speed;
     image_angle += turn_speed;
@@ -157,6 +157,9 @@ if (keyboard_check(left)) {
 if (keyboard_check(right)) {
     x +=5;
 }
+} else {
+    speed = 0;
+    direction = 0;
 }
 if (y &gt; global.offY + room_height + 50) {
     score = tag;
@@ -214,7 +217,7 @@ while (place_meeting(x,y,obj_obstacle)) {
             <string>/// Bullet damage and destruction
 
 if (other.canHit or other.tag != tag) {
-    health -= damage;
+    hlth -= damage;
 
     with(other) {
         instance_destroy();
@@ -243,7 +246,7 @@ if (other.canHit or other.tag != tag) {
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_healthbar(x - 50, y - 50, x + 50, y - 30, health, c_black, c_red, c_green, 0, true, true);
+draw_healthbar(x - 50, y - 50, x + 50, y - 30, hlth, c_black, c_red, c_green, 0, true, true);
 </string>
           </argument>
         </arguments>
