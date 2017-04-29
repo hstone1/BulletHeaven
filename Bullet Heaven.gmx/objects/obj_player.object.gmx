@@ -33,11 +33,13 @@ speed = 10;
 turn_speed = 5;
 move_speed = 8;
 dir = -90;
-image_angle = -90;
+image_angle = 0;
 
 alarm[0] = 10;
 damage = 5;
 hlth = 100;
+
+image_speed = 0.4;
 </string>
           </argument>
         </arguments>
@@ -75,11 +77,6 @@ if (keyboard_check(forward)) {
     }
     
     bullet.tag = tag;
-    if (sprite_index == spr_player) {
-        sprite_index = spr_player_open;
-    } else if (sprite_index == spr_player_open) {
-        sprite_index = spr_player;
-    }
 }
 alarm[0] = 10;
 </string>
@@ -221,6 +218,13 @@ if (other.canHit or other.tag != tag) {
 
     with(other) {
         instance_destroy();
+    }
+    if (health &lt; 0) {
+        if (tag == 1) {
+            sprite_index = spr_player_hurt;
+        } else {
+            sprite_index = spr_player_2_hurt;
+        }
     }
 }
 </string>

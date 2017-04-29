@@ -7,13 +7,15 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_player_open</sprite>
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_obstacle</sprite>
     <sprite>sprites\spr_play</sprite>
     <sprite>sprites\spr_quit</sprite>
     <sprite>sprites\spr_info</sprite>
     <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_player_2</sprite>
+    <sprite>sprites\spr_player_hurt</sprite>
+    <sprite>sprites\spr_player_2_hurt</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\game_background</background>
@@ -22,6 +24,7 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\obj_winner</object>
     <object>objects\obj_player1</object>
     <object>objects\obj_player2</object>
     <object>objects\obj_bullet</object>
@@ -31,7 +34,6 @@
     <object>objects\obj_playbtn</object>
     <object>objects\obj_quitbtn</object>
     <object>objects\obj_obstacle_spawner</object>
-    <object>objects\obj_winner</object>
     <object>objects\obj_info</object>
     <object>objects\object12</object>
   </objects>
