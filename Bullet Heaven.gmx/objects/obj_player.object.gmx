@@ -147,7 +147,10 @@ if (keyboard_check(right)) {
     x +=5;
 }
 
-//if (y &gt; global.offY + 
+if (y &gt; global.offY + room_height + 50) {
+    score = tag;
+    room_goto(end_room);
+}
 
 </string>
           </argument>

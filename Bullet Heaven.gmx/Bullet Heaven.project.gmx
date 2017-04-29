@@ -12,7 +12,6 @@
     <sprite>sprites\spr_obstacle</sprite>
     <sprite>sprites\spr_play</sprite>
     <sprite>sprites\spr_quit</sprite>
-    <sprite>sprites\sprite7</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\game_background</background>
@@ -29,11 +28,12 @@
     <object>objects\obj_playbtn</object>
     <object>objects\obj_quitbtn</object>
     <object>objects\obj_obstacle_spawner</object>
+    <object>objects\obj_winner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>
     <room>rooms\game_room</room>
-    <room>rooms\room2</room>
+    <room>rooms\end_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
