@@ -29,6 +29,7 @@
 event_inherited();
 tag = 0;
 speed = 13;
+
 motion_set(direction, speed);
 
 image_index = irandom(9);
@@ -130,8 +131,9 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = other.speed;
+            <string>/// bullet pushed off screen
 direction = other.direction;
+speed = other.speed;
 </string>
           </argument>
         </arguments>

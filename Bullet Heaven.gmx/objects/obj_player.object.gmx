@@ -60,10 +60,20 @@ health = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check(forward)) {
+            <string>/// shoot
+
+if (keyboard_check(forward)) {
     var bullet = instance_create(x,y, obj_bullet);
     bullet.direction = dir;
     bullet.image_angle = image_angle;
+    with (bullet) {
+        var vx = cos(pi / 180 * direction) * speed;
+        var vy = sin(pi / 180 * direction) * speed + 5;
+
+        speed = sqrt(vx * vx + vy * vy);
+        direction = arctan2(vy, vx) * 180 / pi;
+    }
+    
     bullet.tag = tag;
     if (sprite_index == spr_player) {
         sprite_index = spr_player_open;
@@ -138,8 +148,8 @@ if (keyboard_check(forward)) {
     
     direction = arctan2(vy, -vx) * 180 / pi;
     speed = sqrt(vx * vx + vy * vy);
-
 }
+
 if (keyboard_check(left)) {
     x -= 5;
 }
@@ -150,6 +160,32 @@ if (keyboard_check(right)) {
 if (y &gt; global.offY + room_height + 50) {
     score = tag;
     room_goto(end_room);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Obstacle collision
+
+while (place_meeting(x,y,obj_obstacle)) {
+    y += 1;
 }
 
 </string>
