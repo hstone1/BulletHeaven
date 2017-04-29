@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var bullet = instance_create(irandom(768), y - 1000, obj_obstacle);
+            <string>var bullet = instance_create(random_range(50,700), y - 1000, obj_obstacle);
 alarm[0] = 200;
 </string>
           </argument>

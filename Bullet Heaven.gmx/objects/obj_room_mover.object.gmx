@@ -54,6 +54,7 @@ global.roomSpeed = 10;
             <string>/// Move the room on tick
 global.offY -= global.roomSpeed;
 view_yview[0] = global.offY;
+show_debug_message(global.offY);
 </string>
           </argument>
         </arguments>
