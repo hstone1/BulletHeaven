@@ -29,7 +29,9 @@
 event_inherited();
 tag = 0;
 speed = 13;
+
 motion_set(direction, speed);
+
 image_index = irandom(8);
 image_speed = 0;
 canHit = false;
@@ -106,7 +108,6 @@ alarm[1] = 50000;
             <string>/// Destroy offscreen
 speed *= 0.9999995;
 event_inherited();
-y -= 5;
 if (y &lt; -global.offY) {
     //instance_destroy();
 }
@@ -132,7 +133,9 @@ if (y &lt; -global.offY) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>speed = 0;
+            <string>/// bullet pushed off screen
+direction = other.direction;
+speed = other.speed;
 </string>
           </argument>
         </arguments>
