@@ -16,10 +16,13 @@
     <sprite>sprites\spr_player_2</sprite>
     <sprite>sprites\spr_player_hurt</sprite>
     <sprite>sprites\spr_player_2_hurt</sprite>
+    <sprite>sprites\bar</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\game_background</background>
     <background>background\background1</background>
+    <background>background\menu_background</background>
+    <background>background\end_background</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -36,6 +39,8 @@
     <object>objects\obj_obstacle_spawner</object>
     <object>objects\obj_info</object>
     <object>objects\object12</object>
+    <object>objects\obj_bar</object>
+    <object>objects\obj_button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>

@@ -3,7 +3,7 @@
   <caption></caption>
   <width>768</width>
   <height>768</height>
-  <vsnap>32</vsnap>
+  <vsnap>16</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
   <speed>30</speed>
@@ -58,6 +58,7 @@ window_set_size(768,768);</code>
     <instance objName="obj_player2" x="128" y="224" name="inst_8A19008C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_room_mover" x="288" y="64" name="inst_75414A64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_obstacle_spawner" x="160" y="96" name="inst_7DE90958" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bar" x="0" y="752" name="inst_BC81D3B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

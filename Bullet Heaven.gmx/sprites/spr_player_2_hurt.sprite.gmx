@@ -17,8 +17,8 @@
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>315</width>
-  <height>184</height>
+  <width>229</width>
+  <height>154</height>
   <frames>
     <frame index="0">images\spr_player_2_hurt_0.png</frame>
   </frames>
